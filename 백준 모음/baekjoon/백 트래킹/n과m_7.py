@@ -8,14 +8,14 @@ def back():
         return print(' '.join(map(str,s)))
     
     for i in range(n):
-        if not visited[i]:
-            visited[i]=True
+        if not visited[num[i]]:
             s.append(num[i])
+            visited[num[i]]=True
             back()
             s.pop()
-            visited[i]=False
+            visited[num[i]]=False
          
 
-visited =[False] * (n+1)  
+visited =[False] * (max(num)+1)  
             
 back()
