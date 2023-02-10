@@ -8,7 +8,7 @@ def back():
         return print(' '.join(map(str,s)))
     
     for i in range(n):
-        if not visited[num[i]]:
+        if not visited[i]:
             s.append(num[i])
             visited[num[i]]=True
             back()
